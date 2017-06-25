@@ -111,7 +111,7 @@ class Main extends PluginBase {
       return;
     }
     if($multiplier < 1) {
-      $player->sendMessage("[VoteReward] You haven't voted on any server lists!");
+      $player->sendMessage("[VMVote] You have not voted today! Vote for our server, @ http://tinyurl.com/vote4vfpe");
       return;
     }
     $clones = [];
@@ -152,7 +152,7 @@ class Main extends PluginBase {
       }
       $this->getServer()->getLogger()->info($message);
     }
-    $player->sendMessage("[VoteReward] You voted on $multiplier server list" . ($multiplier == 1 ? "" : "s") . "!");
+    $player->sendMessage("[VoteReward] You have voted on $multiplier server list! weldone!" . ($multiplier == 1 ? "" : "s") . "!");
   }
 
 }
