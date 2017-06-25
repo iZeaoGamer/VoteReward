@@ -86,7 +86,7 @@ class Main extends PluginBase {
           break;
         }
         if(in_array(strtolower($sender->getName()), $this->queue)) {
-          $sender->sendMessage("[VoteReward] Slow down! We're already checking lists for you.");
+          $sender->sendMessage("[VMVote] Slow down! We're already checking lists for you.");
           break;
         }
         $this->queue[] = strtolower($sender->getName());
@@ -152,7 +152,7 @@ class Main extends PluginBase {
       }
       $this->getServer()->getLogger()->info($message);
     }
-    $player->sendMessage("[VoteReward] You have voted on $multiplier server list! weldone!" . ($multiplier == 1 ? "" : "s") . "!");
+    $player->sendMessage("[VMVote] You have voted on $multiplier server list! weldone!" . ($multiplier == 1 ? "" : "s") . "!");
   }
 
 }
