@@ -111,7 +111,7 @@ class Main extends PluginBase {
       return;
     }
     if($multiplier < 1) {
-      $player->sendMessage("[VoteReward] You haven't voted on any server lists!");
+      $player->sendMessage("[VoteReward] You have not voted today! Please vote for us @ http://tinyurl.com/vote4vfpe");
       return;
     }
     $clones = [];
