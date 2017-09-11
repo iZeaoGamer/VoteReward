@@ -1,8 +1,8 @@
 name: VoteReward
 main: LDX\VoteReward\Main
 version: 3.0.2
-api: [1.12.0, 2.0.0]
-author: LDX
+api: [3.0.0-ALPHA6, 3.0.1]
+author: LDX & Zeao
 website: "http://votereward.mcpe.me"
 load: POSTWORLD
 commands:
