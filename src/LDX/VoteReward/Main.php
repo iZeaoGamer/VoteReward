@@ -71,7 +71,7 @@ class Main extends PluginBase {
         if(isset($args[0]) && strtolower($args[0]) == "reload") {
           if(Utils::hasPermission($sender, "votereward.command.reload")) {
             $this->reload();
-            $sender->sendMessage("[VoteReward] All configurations have been reloaded.");
+            $sender->sendMessage("§a[§bVoteReward§a] §6All configurations have been reloaded.");
             break;
           }
           $sender->sendMessage("You do not have permission to use this subcommand.");
@@ -86,7 +86,7 @@ class Main extends PluginBase {
           break;
         }
         if(in_array(strtolower($sender->getName()), $this->queue)) {
-          $sender->sendMessage("[VoteReward] Slow down! We're already checking lists for you.");
+          $sender->sendMessage("§a[§bVoteReward§a] §dSlow down! We're already checking lists for you.");
           break;
         }
         $this->queue[] = strtolower($sender->getName());
@@ -111,7 +111,7 @@ class Main extends PluginBase {
       return;
     }
     if($multiplier < 1) {
-      $player->sendMessage("[VoteReward] You haven't voted on any server lists!");
+      $player->sendMessage("§a[§bVoteReward§a] §6You haven't voted on any server lists! §aVoyte for us at the following links:\n§b1st: §3http://tinyurl.com/vote4voidfactions\n§b2nd: §3http://tinyurl.com/vote4voidfactions2\n§b3rd: §3http://tinyurl.com/vote4voidfactions3\§b4th: §3http://tinyurl.com/vote4voidfactions4");
       return;
     }
     $clones = [];
@@ -152,7 +152,7 @@ class Main extends PluginBase {
       }
       $this->getServer()->getLogger()->info($message);
     }
-    $player->sendMessage("[VoteReward] You voted on $multiplier server list" . ($multiplier == 1 ? "" : "s") . "!");
+    $player->sendMessage("§a[§bVoteReward§a] §6You voted on §e$multiplier §6server list" . ($multiplier == 1 ? "" : "s") . "!");
   }
 
 }
