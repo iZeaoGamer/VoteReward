@@ -65,7 +65,7 @@ class Main extends PluginBase {
     $this->debug = isset($config["Debug"]) && $config["Debug"] === true ? true : false;
   }
 
-  public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
+  public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool {
     switch(strtolower($command->getName())) {
       case "vote":
         if(isset($args[0]) && strtolower($args[0]) == "reload") {
@@ -108,11 +108,11 @@ class Main extends PluginBase {
 
   public function rewardPlayer($player, $multiplier) {
     if(!$player instanceof Player) {
-      return;
+      return true;
     }
     if($multiplier < 1) {
       $player->sendMessage("§a[§bVoteReward§a] §6You haven't voted on any server lists! §aVote for us at the following links:\n§b1st: §3http://tinyurl.com/vote4voidfactions\n§b2nd: §3http://tinyurl.com/vote4voidfactions2\n§b3rd: §3http://tinyurl.com/vote4voidfactions3\n§b4th: §3http://tinyurl.com/vote4voidfactions4");
-      return;
+      return true;
     }
     $clones = [];
     foreach($this->items as $item) {
