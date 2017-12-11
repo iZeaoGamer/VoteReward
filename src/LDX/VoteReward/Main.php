@@ -111,7 +111,7 @@ class Main extends PluginBase {
       return true;
     }
     if($multiplier < 1) {
-      $player->sendMessage("§a[§bVoteReward§a] §6You haven't voted on any server lists! §aVote for us at the following links:\n§b1st: §3http://tinyurl.com/vote4voidfactions\n§b2nd: §3http://tinyurl.com/vote4voidfactions2\n§b3rd: §3http://tinyurl.com/vote4voidfactions3\n§b4th: §3http://tinyurl.com/vote4voidfactions4");
+      $player->sendMessage("§a[§bVoteReward§a] §6You haven't voted on any server lists! §aVote for us at the following links:\n§b1st: §3http://tinyurl.com/vote4vfac\n§b2nd: §3http://tinyurl.com/vote4voidfactions2\n§b3rd: §3http://tinyurl.com/vote4voidfactions3\n§b4th: §3http://tinyurl.com/vote4voidfactions4");
       return true;
     }
     $clones = [];
