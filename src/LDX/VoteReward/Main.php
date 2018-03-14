@@ -111,7 +111,7 @@ class Main extends PluginBase {
       return true;
     }
     if($multiplier < 1) {
-      $player->sendMessage("§a[§bVoteReward§a] §6You haven't voted on any server lists! §aYou can vote for: §b1 Money Pouch, §cBuilding blocks, §dVoter rank\n§eAwrsome commands, §130k Money in game, §2and so much more! §aVote for us to get these perks at the following links:\n§b1st: §3http://tinyurl.com/vote4vfac");
+      $player->sendMessage("§a[§bVoteReward§a] §6You haven't voted on any server lists! §aYou can vote for: §b1 Money Pouch, §cBuilding blocks, §dVoter rank\n§eAwrsome commands, §130k Money in game, §2and so much more! §aVote for us to get these perks at the following links:\n§b1st: §3http://vmpevote.ml");
       return true;
     }
     $clones = [];
