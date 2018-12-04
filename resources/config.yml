@@ -14,7 +14,7 @@
 # EssentialsPE style color codes can be used in the message and commands.
 
 # Message to broadcast to the server when a player votes.
-Message: "The player &e{NICKNAME}&r voted with &b/vote&r and got cool rewards!"
+Message: "&aThe player &6{USERNAME} &ahas voted and received: &b2 Vote points, &cA rank, &bCommands, &c10 Vote keys, &b5k Money in game per vote, &cand much more! &bVote at the following links to get these perks: &51st: &3http://vmpevote.ml &52nd: &3http://tinyurl.com/vmpevote2 &53rd: &3http://tinyurl.com/vmpevote3"
 
 # List of items to give players when they vote. Format: ID:Damage:Amount
 Items:
@@ -25,3 +25,7 @@ Items:
 # List of commands to execute when a player votes.
 Commands:
   - "particle portal {X} {Y1} {Z} 2 2 2 10000"
+  - "key Vote 10 {USERNAME}"
+  - "vp {USERNAME} 2"
+  - "givemoney {USERNAME} 5000"
+  
