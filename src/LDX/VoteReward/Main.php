@@ -97,7 +97,7 @@ class Main extends PluginBase {
           }
         }
         $query = new RequestThread(strtolower($sender->getName()), $requests);
-        $this->getServer()->getScheduler()->scheduleAsyncTask($query);
+        $this->getScheduler()->scheduleAsyncTask($query);
         break;
       default:
         $sender->sendMessage("§cInvalid command.");
