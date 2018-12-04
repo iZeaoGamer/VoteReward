@@ -71,10 +71,10 @@ class Main extends PluginBase {
         if(isset($args[0]) && strtolower($args[0]) == "reload") {
           if(Utils::hasPermission($sender, "votereward.command.reload")) {
             $this->reload();
-            $sender->sendMessage("§a[§bVoteReward§a] §6All configurations have been reloaded.");
+            $sender->sendMessage("§7[§aVote§2Reward§7] §dAll configurations have been reloaded.");
             break;
           }
-          $sender->sendMessage("You do not have permission to use this subcommand.");
+          $sender->sendMessage("§cYou do not have permission to use this subcommand.");
           break;
         }
         if(!$sender instanceof Player) {
@@ -82,11 +82,11 @@ class Main extends PluginBase {
           break;
         }
         if(!Utils::hasPermission($sender, "votereward.command.vote")) {
-          $sender->sendMessage("You do not have permission to use this command.");
+          $sender->sendMessage("§cYou do not have permission to use this command.");
           break;
         }
         if(in_array(strtolower($sender->getName()), $this->queue)) {
-          $sender->sendMessage("§a[§bVoteReward§a] §dSlow down! We're already checking lists for you.");
+          $sender->sendMessage("§7[§aVote§2Reward§7] §cSlow down! We're already checking lists for you.");
           break;
         }
         $this->queue[] = strtolower($sender->getName());
@@ -100,7 +100,7 @@ class Main extends PluginBase {
         $this->getServer()->getScheduler()->scheduleAsyncTask($query);
         break;
       default:
-        $sender->sendMessage("Invalid command.");
+        $sender->sendMessage("§cInvalid command.");
         break;
     }
     return true;
@@ -111,7 +111,7 @@ class Main extends PluginBase {
       return true;
     }
     if($multiplier < 1) {
-      $player->sendMessage("§a[§bVoteReward§a] §6You haven't voted on any server lists! §aYou can vote for: §bin game Money ($15,000), §cand Diamond pickaxe. §aVote for us to get these perks at the following links:\n§b1st: §3http://vfpevote.ml\n§aVote every day to be the top voter! \n§aAll three top voters will get Donor ranks! \n§aFirst top voter will get: §bKnight\n§aSecond top voter: §bFighter\n§aThird top voter: §bMiner\n§a(They're all Donor ranks!)");
+      $player->sendMessage("§7[§aVote§2Reward§7] §bYou haven't voted on any server lists! §aYou can vote for: §bin game Money ($10,000), §cReceive a Lotto ticket, §b2 Votepoints, §cCommands, §bRanks, §cand much more! §aVote for us to get these perks at the following links:\n§b1st: §3http://vmpevote.ml\n§b2nd: §3http://tinyurl.com/vmpevote2\n§b3rd: §bhttp://tinyurl.com/vmpevote3\n§aVote every day to be the top voter! \n§aAll three top voters will get Donor ranks! \n§aTop voter of the month will receive Top voter rank!");
       return true;
     }
     $clones = [];
@@ -152,7 +152,7 @@ class Main extends PluginBase {
       }
       $this->getServer()->getLogger()->info($message);
     }
-    $player->sendMessage("§a[§bVoteReward§a] §6You voted on §e$multiplier §6server list" . ($multiplier == 1 ? "" : "s") . "!");
+    $player->sendMessage("§7[§aVote§2Reward§7] §dYou voted on §5$multiplier §dserver list" . ($multiplier == 1 ? "" : "s") . "!");
   }
 
 }
