@@ -4,11 +4,13 @@ namespace LDX\VoteReward;
 
 use pocketmine\Server;
 use pocketmine\scheduler\AsyncTask;
+use pocketmine\utils\Internet;
 
 class RequestThread extends AsyncTask {
 
   private $queries;
   private $rewards;
+  private $error;
 
   public function __construct($id, $queries) {
     $this->id = $id;
